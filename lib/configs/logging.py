@@ -16,7 +16,7 @@ d = {
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'level': 'WARN',
             'formatter': 'simple',
-            'filename': '/var/log/bitso.log',
+            'filename': '/var/log/poloniexws.log',
             'when': 'D'
         }
     },

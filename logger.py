@@ -1,4 +1,5 @@
 import logging.config
+import tornado
 from poloniexws import Client as Websocket
 
 import lib.configs.logging
@@ -9,8 +10,8 @@ logging.config.dictConfig(lib.configs.logging.d)
 
 
 if __name__ == '__main__':
-    books = []
-    with Websocket(books) as client:
+    channels = ['BTC_ETC']
+    with Websocket(channels) as client:
         with SimpleLoggerSubscriber(client):
             client.connect()
             try:
